@@ -1,0 +1,36 @@
+a=input("enter the first name:").lower().strip(' ')
+b=input("enter the second name:").lower().strip(' ')
+s1=list(a)
+s2=list(b)
+l3=list(a)
+l4=list(b)
+while ' ' in s1:
+    s1.remove(' ')
+while ' ' in s2:
+    s2.remove(' ')
+while ' ' in l3:
+    l3.remove(' ')
+while ' ' in l4:
+    l4.remove(' ')
+for i in s1:
+    if i in s2:
+        s2.remove(i)
+for i in l4:
+    if i in l3:
+        l3.remove(i)
+size1=len(l3)
+size2=len(s2) 
+sum=size1+size2
+list=['Friends',' In Love','Affection','Get Marriage','Enemies','Sibblings']
+n=6
+m=list*100
+if sum!=0:
+  while n != 1:
+     del m[0:sum-1]
+     list.remove(m[0])
+     print()
+     g=m[0]
+     while ( g in m) :
+         m.remove(g)
+     n=len(list)
+print(a,'and',b,' has a relation of ---------     ',list[0])
